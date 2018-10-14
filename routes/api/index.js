@@ -1,8 +1,9 @@
 const router = require("express").Router();
-const articlesRoutes = require("./article");
-const savedRoutes = require("./saved");
+const headlineRoutes = require("./headlines");
+// const commentRoutes = require("./comments");
 
-router.use("/saved", savedRoutes);
-router.use("/article", articlesRoutes);
+// Headline routes
+router.use("/headlines", headlineRoutes);
+// router.use("/comments", commentRoutes);
 
 module.exports = router;
