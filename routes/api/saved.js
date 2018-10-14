@@ -1,6 +1,6 @@
 const axios = require("axios");
 const router = require("express").Router();
-const articlesController = require("../../controller/articlesController");
+const articlesController = require("../../controllers/articlesController");
 
 router
     .route("/")
@@ -12,4 +12,3 @@ router
     .delete(articlesController.remove);
     
 module.exports = router;
-    

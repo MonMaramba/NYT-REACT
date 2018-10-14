@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { DeleteBtn } from "../components/Buttons";
+import {DeleteBtn} from "../components/Buttons";
 import Jumbotron from "../components/Jumbotron";
-import API from "../API";
+import API from "../utils/API";
 import Nav from "../components/Nav";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";

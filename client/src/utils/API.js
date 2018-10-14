@@ -1,19 +1,21 @@
 import axios from "axios";
 
 export default {
-    callNYT: function (query) {
-        return axios.get("/api/article/call", { params: { q: query} });
-    },
-
-    getSaved: function() {
-        return axios.get("/api/saved");
-    },
-    
-    deleteArticle: function (id) {
-        return axios.delete("/api/saved/" + id)
-    },
-
-    saveArticle: function(article) {
-        return axios.post("/api/saved", article)
-    }
+  // Gets all saved headlines
+  getHeadlines: function() {
+    return axios.get("/api/headlines");
+  },
+  // Gets the headline with the given id
+  getHeadline: function(id) {
+    return axios.get("/api/headlines/" + id);
+  },
+  // Deletes the headline with the given id
+  deleteHeadline: function(id) {
+    return axios.delete("/api/headlines/" + id);
+  },
+  // Saves a headline to the database
+  saveHeadline: function(headlineData) {
+    return axios.post("/api/headlines", headlineData);
+  }
+  
 };

@@ -15,15 +15,12 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(__dirname + "client/build"));
 }
+// require("dotenv").config();
 
-mongoose.Promise = gobal.Promise;
+mongoose.Promise = global.Promise;
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/nytreact',
-  {
-    useMongoClient: true
-  }
-)
+  process.env.MONGODB_URI || 'mongodb://localhost/nytreact')
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
